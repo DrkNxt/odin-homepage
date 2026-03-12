@@ -203,10 +203,6 @@ div.project-icons {
   gap: 1rem;
   height: 24px;
 }
-a > svg:hover,
-a > svg:active {
-  fill: blue;
-}
 
 div.project-card > p {
   margin: 0 0 1rem 0;
@@ -265,6 +261,8 @@ div.contact-info {
   fill: white;
 }
 
+a > svg:hover,
+a > svg:active,
 .socials > a > svg:hover,
 .socials > a > svg:active {
   fill: rgb(68, 230, 255);
