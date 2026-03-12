@@ -26,6 +26,26 @@ Make grid auto-fit content:
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    url("./fonts/PlayfairDisplay-Italic.woff2") format("woff2"),
+    url("./fonts/PlayfairDisplay-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    url("./fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   line-height: 1.6;
   font-family: "Roboto", Arial, sans-serif;
@@ -33,4 +53,100 @@ Make grid auto-fit content:
   --primary-color: #e1e1e1;
   --secondary-color: #555555;
   --text-color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 10px;
+}
+
+div.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+div.project-card {
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition:
+    box-shadow 0.3s ease,
+    scale 0.3s ease;
+}
+
+div.project-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  scale: 1.02;
+}
+
+div.project-image {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  align-content: center;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  height: 250px;
+  border-radius: 4px;
+}
+
+div.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+div.project-icons {
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  height: 24px;
+}
+a > svg:hover,
+a > svg:active {
+  fill: blue;
+}
+
+div.project-card > p {
+  margin: 0 0 1rem 0;
+}
+
+@media (max-width: 600px) {
+  main > h2 {
+    text-align: center;
+  }
 }
